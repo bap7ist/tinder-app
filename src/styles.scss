@@ -10,9 +10,20 @@
 
 }
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
 body {
     margin: 0;
     padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.f-sb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
@@ -32,6 +43,7 @@ p {
     font-size: 0.9rem;
     font-weight: 100;
     line-height: 1.5rem;
+    margin: 0;
 }
 
 button {
@@ -58,3 +70,5 @@ input {
     padding-inline-start: 20px;
     width: 250px;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

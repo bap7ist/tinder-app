@@ -31,12 +31,25 @@
     Consultez notre Politique de confidentialité et notre Politique relative aux
     cookies pour savoir comment nous traitons vos données.
   </p>
-  <div class="form">
-    <input type="text" placeholder="Votre email" />
-    <input type="text" placeholder="Votre mot de passe" />
+  <form class="form" [formGroup]="conectionForm">
+    <input type="email" formControlName="email" placeholder="Votre email" />
+    <input type="password" formControlName="password" placeholder="Votre mot de passe" />
+    <div class="looking-for">
+      <p>Que recherchez-vous ?</p>
+      <div class="f-sb">
+        <div class="checkbox">
+          <p>Filles</p>
+          <input name="girl" type="checkbox" formControlName="girl" />
+        </div>
+        <div class="checkbox">
+          <p>Garçons</p>
+          <input name="boy" type="checkbox" formControlName="boy"/>
+        </div>
+      </div>
+    </div>
     <button (click)="goToSwipe()">
       {{ origin === "connect" ? "Connexion" : "Inscription" }}
     </button>
-  </div>
+  </form>
   <div class="separator"></div>
 </div>

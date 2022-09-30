@@ -23,7 +23,9 @@
       <h1>En savoir plus</h1>
       <h1>Sécurité</h1>
       <h1>Assistance</h1>
-      <h1>Télécharger</h1>
+      <a href="https://tinder.com/fr/download">
+        <h1>Télécharger</h1>
+      </a>
     </div>
     <div class="right-header">
       <div class="language-button">
@@ -55,35 +57,10 @@
     </div>
     <div class="bottom">
       <div class="card-container">
-        <div class="card">
-          <h2>Rebecca Stephenson</h2>
+        <div *ngFor="let card of cards" class="card">
+          <h2>{{ card.name }}</h2>
           <p>
-            Grâce à Tinder, j’ai trouvé l’amour de ma vie et nous allons bientôt
-            nous marier. Après quelques rendez-vous et bonnes soirées, je suis
-            tombée sur Miranda. J’ai vu son profil et je n’ai pas pu résister,
-            j’ai swipé à droite après avoir lu sa dernière phrase… «&nbsp;Je
-            cherche ma super chérie pour la vie&nbsp;». Après avoir discuté
-            pendant une semaine, on a eu notre premier rendez-vous et j’ai su
-            qu’elle avait quelque chose de spécial&nbsp;!
-          </p>
-        </div>
-        <div class="card">
-          <h2>Elissa Donahue</h2>
-          <p>
-            J’étais décidée à ce que le prochain mec avec qui je m’engagerai
-            soit l’homme avec qui je passerai le reste de ma vie (pas seulement
-            avec qui je me marierai). J’étais super exigeante et je ne
-            m’attendais pas à rencontrer un mec sur Tinder. J’ai décidé de
-            m’inscrire quand même, de matcher et de voir ce qui se passerait.
-          </p>
-        </div>
-        <div class="card">
-          <h2>Maria Sveranov</h2>
-          <p>
-            Je ne m’attendais pas vraiment à ce que ça donne quoi que ce soit,
-            mais un jour, je suis tombée sur ce canon dans l’appli. Je lui ai
-            envoyé un Super Like, j’ai même payé un dollar en plus pour ce Super
-            Like&nbsp;!
+            {{ card.text }}
           </p>
         </div>
       </div>
