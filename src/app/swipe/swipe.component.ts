@@ -21,7 +21,11 @@ export class SwipeComponent implements OnInit {
 
   switched: boolean
 
+  money: number
+
   index: number;
+
+  max: number
 
   girl: boolean;
   boy: boolean;
@@ -36,9 +40,10 @@ export class SwipeComponent implements OnInit {
 
   ngOnInit(): void {
     this.initParamsFromRoute();
-    this.getUsers(50, this.girl, this.boy);
-    this.index = 1;
+    this.getUsers(20, this.girl, this.boy);
+    this.index = 0;
     this.initForm()
+    this.money = 3
   }
 
   initForm():void {
@@ -73,9 +78,15 @@ export class SwipeComponent implements OnInit {
       this.users = results.filter((res) => res.gender === 'male');
       else if (girl)
       this.users = results.filter((res) => res.gender === 'female');
+      this.max = this.users.length
     });
   }
 
+  refresh() {
+    this.getUsers(20, this.girl, this.boy)
+    this.index = 0
+    this.money--
+  }
 
   onSwipe(swipe: string, user: User) {
     if (swipe === 'right') this.favourites.push(user);

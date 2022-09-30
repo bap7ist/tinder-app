@@ -122,6 +122,36 @@
     justify-content: center;
     align-items: center;
 
+    .money-counter {
+        border: 1px solid rgba(214,49,118,0.5);
+        width: 50px;
+        height: 30px;
+        padding: 0.4rem;
+        border-radius: 8px;
+        position: absolute;
+        top: 1rem;
+        left: 465px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(214,49,118,1);
+        gap: 1rem;
+    }
+
+    .no-more {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        button {
+            height: 40px;
+            background: linear-gradient(90deg, rgba(214,49,118,1) 0%, rgba(224,115,95,1) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     .switch-button-container {
         width: 60px;
         height: 30px;
@@ -150,6 +180,9 @@
 }
 
 .dark-page {
+    h1, p, button {
+        color: white;
+    }
     .left-section {
         background-color: #242831;
         border-right: 1px solid black;
@@ -164,9 +197,7 @@
                 background-color: #393d44;
             }
         }
-        h1, p {
-            color: white;
-        }
+      
     }
 
     .right-section {
@@ -204,3 +235,4 @@
         }
     }
 }
+

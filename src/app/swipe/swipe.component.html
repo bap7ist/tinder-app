@@ -8,7 +8,7 @@
         <h1>Mon Profil</h1>
       </div>
       <div (click)="settings = !settings" class="menu">
-        <mat-icon>{{ settings ? 'close' : 'tune' }}</mat-icon>
+        <mat-icon>{{ settings ? "close" : "tune" }}</mat-icon>
       </div>
     </div>
     <div class="sub-header">
@@ -33,12 +33,15 @@
     </div>
   </section>
   <section class="right-section">
+    <div class="money-counter">
+      <mat-icon>savings</mat-icon>
+      <h1>{{ money }}</h1>
+    </div>
     <div *ngIf="settings" class="settings-container">
       <div class="left">
         <div class="arrow"></div>
       </div>
-      <form [formGroup]="settingsForm" class="right">
-      </form>
+      <form [formGroup]="settingsForm" class="right"></form>
     </div>
     <div (click)="switchMode()" class="switch-button-container">
       <div [ngClass]="darkmode ? 'switched' : ''" class="switch"></div>
@@ -51,5 +54,10 @@
         (swipe)="onSwipe($event, user)"
       ></app-tinder-card>
     </ng-container>
+    <div class="no-more" *ngIf="index >= max">
+      <h1>{{ money > 0 ? "Vous avez swipé comme un fou !" : "Vous n'avez plus de crédit ... "}}</h1>
+      <button *ngIf="money > 0" (click)="refresh()">Voir plus ( Dépenser 1 <mat-icon>savings</mat-icon>)</button>
+    </div>
+    <h1 ></h1>
   </section>
 </div>

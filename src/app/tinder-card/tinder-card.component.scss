@@ -23,6 +23,11 @@
     .description {
         margin-top: -1rem;
         padding: 1rem;
+        .name-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
     .country {
         display: flex;
